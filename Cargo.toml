@@ -1,0 +1,19 @@
+[package]
+name = "silent_browser"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.90"
+
+[dependencies]
+# The Servo browser engine is a complex project that's not available as a simple crate
+# For a real browser implementation, you would typically use:
+# servo = { git = "https://github.com/servo/servo", branch = "main" }
+# or use individual servo components like:
+# style = "0.32.0"  # Servo's CSS parsing and styling engine
+# html5ever = "0.27.0"  # Servo's HTML parser
+# url = "2.5.0"  # URL parsing
+
+# For now, adding some commonly used crates for browser/web-related functionality
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+reqwest = { version = "0.12", features = ["json"] }
